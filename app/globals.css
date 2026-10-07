@@ -31,22 +31,6 @@
   --font-mono: var(--font-mono-stack);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #0e0d0b;
-    --bg-elev: #171613;
-    --ink: #f3efe6;
-    --ink-muted: #a6a29a;
-    --ink-faint: #6f6b63;
-    --rule: #2a2822;
-    --accent: #e86a56;
-    --left: #60a5fa;
-    --center: #a3a3a3;
-    --right: #ef6a5c;
-    --tag: #221f1a;
-  }
-}
-
 :root[data-theme="dark"] {
   --bg: #0e0d0b;
   --bg-elev: #171613;
@@ -93,14 +77,6 @@ body {
 .dark-show {
   display: none;
 }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .dark-hide {
-    display: none;
-  }
-  :root:not([data-theme="light"]) .dark-show {
-    display: block;
-  }
-}
 :root[data-theme="dark"] .dark-hide {
   display: none;
 }
@@ -134,15 +110,6 @@ body {
     transparent 1px
   );
   background-size: 3px 3px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .paper {
-    background-image: radial-gradient(
-      rgba(255, 255, 255, 0.03) 1px,
-      transparent 1px
-    );
-  }
 }
 
 :root[data-theme="dark"] .paper {

@@ -2,6 +2,8 @@ import Link from "next/link";
 import { articles } from "@/lib/articles";
 import { ArticleCard } from "@/components/ArticleCard";
 
+const YOUTUBE_PLAYLIST_ID = "PLREPLACE_WITH_YOUR_PLAYLIST_ID";
+
 const monthGroups = [
   { label: "October 2026", slug: "october-2026", items: articles.slice(0, 3) },
   { label: "September 2026", slug: "september-2026", items: articles.slice(3, 6) },
@@ -29,6 +31,54 @@ export default function Home() {
             {sideStories.map((a) => (
               <ArticleCard key={a.id} article={a} variant="side" />
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-10 border-b rule">
+        <div className="mb-6 flex items-end justify-between gap-4 flex-wrap">
+          <div>
+            <h2 className="font-serif text-[28px] tracking-tight text-ink">
+              Watch · ChallanPay on YouTube
+            </h2>
+            <p className="mt-1 text-[13px] text-ink-muted">
+              Explainers, road-safety reports, and challan how-tos.
+            </p>
+          </div>
+          <a
+            href={`https://www.youtube.com/playlist?list=${YOUTUBE_PLAYLIST_ID}`}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 h-9 px-4 rounded-full border rule bg-bg-elev text-[13px] font-medium text-ink hover:bg-tag transition-colors"
+          >
+            Open playlist
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M7 17L17 7" />
+              <path d="M8 7h9v9" />
+            </svg>
+          </a>
+        </div>
+        <div className="surface-flat overflow-hidden">
+          <div className="relative w-full" style={{ aspectRatio: "16 / 9" }}>
+            <iframe
+              className="absolute inset-0 h-full w-full"
+              src={`https://www.youtube-nocookie.com/embed/videoseries?list=${YOUTUBE_PLAYLIST_ID}&rel=0`}
+              title="ChallanPay YouTube playlist"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="strict-origin-when-cross-origin"
+            />
           </div>
         </div>
       </section>
