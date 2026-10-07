@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { articles } from "@/lib/articles";
 import { ArticleCard } from "@/components/ArticleCard";
+import { SearchBar } from "@/components/SearchBar";
+import { YouTubePlaylist } from "@/components/YouTubePlaylist";
 
 const YOUTUBE_PLAYLIST_ID = "PLMdV59IYMLTo";
 
@@ -17,11 +19,44 @@ export default function Home() {
 
   return (
     <div className="mx-auto max-w-[1360px] px-5 lg:px-10">
-      <section className="pt-8 lg:pt-12 pb-10 border-b rule">
-        <div className="mb-6">
-          <h1 className="font-serif text-[36px] lg:text-[52px] leading-[1.02] tracking-tight">
+      <section className="pt-6 lg:pt-8 pb-4 text-center">
+        <h1 className="font-serif text-[40px] md:text-[60px] lg:text-[80px] leading-[0.95] tracking-tight text-ink">
+          Challan Times
+        </h1>
+        <p className="mt-2 text-[11px] md:text-[12px] uppercase tracking-[0.3em] text-ink-muted">
+          News · Opinion · Road Safety
+        </p>
+      </section>
+
+      <section className="pb-4 border-b rule">
+        <SearchBar />
+        <div className="mt-3 flex items-center gap-2 overflow-x-auto no-scrollbar">
+          {[
+            "Parliament",
+            "Supreme Court",
+            "RBI",
+            "Road Safety",
+            "Climate",
+            "Elections",
+            "Challans",
+            "Economy",
+          ].map((kw) => (
+            <Link
+              key={kw}
+              href={`/search?q=${encodeURIComponent(kw)}`}
+              className="shrink-0 inline-flex items-center h-8 px-3 rounded-full border rule bg-bg-elev text-[12px] font-medium text-ink hover:bg-tag transition-colors"
+            >
+              {kw}
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="pt-6 lg:pt-8 pb-10 border-b rule">
+        <div className="mb-5">
+          <h2 className="font-serif text-[36px] lg:text-[52px] leading-[1.02] tracking-tight">
             Latest News
-          </h1>
+          </h2>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div className="lg:col-span-2">
@@ -39,7 +74,7 @@ export default function Home() {
         <div className="mb-6 flex items-end justify-between gap-4 flex-wrap">
           <div>
             <h2 className="font-serif text-[28px] tracking-tight text-ink">
-              Watch · ChallanPay on YouTube
+              Watch · Challan Times on YouTube
             </h2>
             <p className="mt-1 text-[13px] text-ink-muted">
               Explainers, road-safety reports, and challan how-tos.
@@ -68,19 +103,7 @@ export default function Home() {
             </svg>
           </a>
         </div>
-        <div className="surface-flat overflow-hidden">
-          <div className="relative w-full" style={{ aspectRatio: "16 / 9" }}>
-            <iframe
-              className="absolute inset-0 h-full w-full"
-              src={`https://www.youtube-nocookie.com/embed/videoseries?list=${YOUTUBE_PLAYLIST_ID}&rel=0`}
-              title="ChallanPay YouTube playlist"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="strict-origin-when-cross-origin"
-            />
-          </div>
-        </div>
+        <YouTubePlaylist playlistId={YOUTUBE_PLAYLIST_ID} />
       </section>
 
       <section className="py-8">

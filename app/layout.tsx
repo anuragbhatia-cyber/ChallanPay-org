@@ -5,6 +5,7 @@ import Link from "next/link";
 import "./globals.css";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { SearchBar } from "@/components/SearchBar";
+import { ChatBot } from "@/components/ChatBot";
 
 const themeInitScript = `(function(){try{var s=localStorage.getItem('theme');if(s==='light'||s==='dark'){document.documentElement.setAttribute('data-theme',s);}}catch(e){}})();`;
 
@@ -46,23 +47,15 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-screen flex flex-col bg-bg text-ink pt-20">
         <header className="fixed inset-x-0 top-0 z-50 border-b rule bg-bg-elev">
           <div className="mx-auto max-w-[1360px] px-5 lg:px-10">
-            <div className="grid grid-cols-[1fr_auto_1fr] items-center h-20 gap-4">
-              <div className="justify-self-start">
-                <SearchBar />
-              </div>
+            <div className="flex items-center justify-between h-20 gap-4">
               <Link
                 href="/"
                 aria-label="Challan Times — Home"
-                className="justify-self-center flex flex-col items-center leading-none select-none"
+                className="text-[14px] font-medium uppercase tracking-[0.16em] text-ink-muted hover:text-ink transition-colors"
               >
-                <span className="font-serif text-[26px] md:text-[34px] tracking-tight text-ink">
-                  Challan Times
-                </span>
-                <span className="mt-1 text-[10px] md:text-[11px] uppercase tracking-[0.18em] text-ink-muted">
-                  Thursday · 05 Oct 2026
-                </span>
+                Thursday · 05 Oct 2026
               </Link>
-              <div className="justify-self-end flex items-center gap-2">
+              <div className="flex items-center gap-2">
                 <ThemeToggle />
                 <button className="group h-9 pl-6 pr-5 bg-ink text-bg rounded-full text-[13px] font-medium flex items-center gap-3">
                   Check Challans
@@ -87,7 +80,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           </div>
         </header>
         <main className="flex-1">{children}</main>
-        <footer className="bg-[#0b1120] text-white mt-16">
+        <ChatBot />
+        <footer className="bg-black text-white mt-16">
           <div className="mx-auto max-w-[1360px] px-5 lg:px-10 pt-16 pb-10">
             <div>
               <div className="relative block h-12 md:h-16 w-[147px] md:w-[196px] select-none">

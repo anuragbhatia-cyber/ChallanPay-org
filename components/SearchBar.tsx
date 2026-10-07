@@ -17,7 +17,7 @@ export function SearchBar() {
   return (
     <form
       onSubmit={submit}
-      className="flex items-center h-12 w-64 md:w-80 lg:w-[420px] px-4 rounded-full border-2 rule bg-bg-elev shadow-sm focus-within:border-ink/40 focus-within:shadow-md transition-all"
+      className="flex items-center h-14 w-full px-5 rounded-full border-2 rule bg-bg-elev focus-within:border-ink/40 transition-colors"
     >
       <button
         type="submit"
