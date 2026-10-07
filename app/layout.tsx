@@ -44,10 +44,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
-      <body className="min-h-screen flex flex-col bg-bg text-ink pt-20">
+      <body className="min-h-screen flex flex-col bg-bg text-ink pt-14">
         <header className="fixed inset-x-0 top-0 z-50 border-b rule bg-bg-elev">
           <div className="mx-auto max-w-[1360px] px-5 lg:px-10">
-            <div className="flex items-center justify-between h-20 gap-4">
+            <div className="flex items-center justify-between h-14 gap-4">
               <Link
                 href="/"
                 aria-label="Challan Times — Home"
@@ -81,7 +81,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </header>
         <main className="flex-1">{children}</main>
         <ChatBot />
-        <footer className="bg-black text-white mt-16">
+        <footer className="bg-[#0e1a33] text-white mt-16">
           <div className="mx-auto max-w-[1360px] px-5 lg:px-10 pt-16 pb-10">
             <div>
               <div className="relative block h-12 md:h-16 w-[147px] md:w-[196px] select-none">
@@ -112,8 +112,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               </p>
               <div className="flex items-center gap-4 text-white/60">
                 <a
-                  href="#"
-                  aria-label="Twitter"
+                  href="https://x.com/challanpay25389"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="X (Twitter)"
                   className="hover:text-white"
                 >
                   <svg
@@ -127,7 +129,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
                   </svg>
                 </a>
                 <a
-                  href="#"
+                  href="https://www.instagram.com/challanpay.in"
+                  target="_blank"
+                  rel="noreferrer"
                   aria-label="Instagram"
                   className="hover:text-white"
                 >
@@ -146,7 +150,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
                   </svg>
                 </a>
                 <a
-                  href="#"
+                  href="https://www.facebook.com/ChallanPay"
+                  target="_blank"
+                  rel="noreferrer"
                   aria-label="Facebook"
                   className="hover:text-white"
                 >
@@ -161,7 +167,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
                   </svg>
                 </a>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/company/challanpay/"
+                  target="_blank"
+                  rel="noreferrer"
                   aria-label="LinkedIn"
                   className="hover:text-white"
                 >

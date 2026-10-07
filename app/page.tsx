@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { articles } from "@/lib/articles";
 import { ArticleCard } from "@/components/ArticleCard";
@@ -20,9 +21,25 @@ export default function Home() {
   return (
     <div className="mx-auto max-w-[1360px] px-5 lg:px-10">
       <section className="pt-6 lg:pt-8 pb-4 text-center">
-        <h1 className="font-serif text-[40px] md:text-[60px] lg:text-[80px] leading-[0.95] tracking-tight text-ink">
-          Challan Times
-        </h1>
+        <h1 className="sr-only">Challan Times</h1>
+        <div className="relative mx-auto h-[48px] md:h-[64px] lg:h-[80px] w-[256px] md:w-[340px] lg:w-[426px] max-w-full">
+          <Image
+            src="/logo-challan-times.png"
+            alt="Challan Times"
+            fill
+            sizes="(min-width: 1024px) 426px, (min-width: 768px) 340px, 256px"
+            priority
+            className="object-contain dark-hide"
+          />
+          <Image
+            src="/logo-challan-times-dark.png"
+            alt="Challan Times"
+            fill
+            sizes="(min-width: 1024px) 426px, (min-width: 768px) 340px, 256px"
+            priority
+            className="object-contain dark-show"
+          />
+        </div>
         <p className="mt-2 text-[11px] md:text-[12px] uppercase tracking-[0.3em] text-ink-muted">
           News · Opinion · Road Safety
         </p>
@@ -76,9 +93,6 @@ export default function Home() {
             <h2 className="font-serif text-[28px] tracking-tight text-ink">
               Watch · Challan Times on YouTube
             </h2>
-            <p className="mt-1 text-[13px] text-ink-muted">
-              Explainers, road-safety reports, and challan how-tos.
-            </p>
           </div>
           <a
             href={`https://www.youtube.com/playlist?list=${YOUTUBE_PLAYLIST_ID}`}

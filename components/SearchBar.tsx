@@ -19,10 +19,17 @@ export function SearchBar() {
       onSubmit={submit}
       className="flex items-center h-14 w-full px-5 rounded-full border-2 rule bg-bg-elev focus-within:border-ink/40 transition-colors"
     >
+      <input
+        type="text"
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+        placeholder="Search stories, topics, people..."
+        className="flex-1 bg-transparent outline-none text-[15px] text-ink placeholder:text-ink-faint"
+      />
       <button
         type="submit"
         aria-label="Search"
-        className="text-ink-muted hover:text-ink"
+        className="ml-3 text-ink-muted hover:text-ink"
       >
         <svg
           width="20"
@@ -39,13 +46,6 @@ export function SearchBar() {
           <path d="M21 21l-4.3-4.3" />
         </svg>
       </button>
-      <input
-        type="text"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        placeholder="Search stories, topics, people..."
-        className="ml-3 flex-1 bg-transparent outline-none text-[15px] text-ink placeholder:text-ink-faint"
-      />
     </form>
   );
 }
