@@ -17,7 +17,7 @@ export function SearchBar() {
   return (
     <form
       onSubmit={submit}
-      className="flex items-center h-9 w-56 md:w-72 px-3 rounded-full border rule bg-bg-elev"
+      className="flex items-center h-12 w-64 md:w-80 lg:w-[420px] px-4 rounded-full border-2 rule bg-bg-elev shadow-sm focus-within:border-ink/40 focus-within:shadow-md transition-all"
     >
       <button
         type="submit"
@@ -25,8 +25,8 @@ export function SearchBar() {
         className="text-ink-muted hover:text-ink"
       >
         <svg
-          width="16"
-          height="16"
+          width="20"
+          height="20"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
@@ -43,8 +43,8 @@ export function SearchBar() {
         type="text"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        placeholder="Search stories..."
-        className="ml-2 flex-1 bg-transparent outline-none text-[13px] text-ink placeholder:text-ink-faint"
+        placeholder="Search stories, topics, people..."
+        className="ml-3 flex-1 bg-transparent outline-none text-[15px] text-ink placeholder:text-ink-faint"
       />
     </form>
   );

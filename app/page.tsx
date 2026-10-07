@@ -2,7 +2,7 @@ import Link from "next/link";
 import { articles } from "@/lib/articles";
 import { ArticleCard } from "@/components/ArticleCard";
 
-const YOUTUBE_PLAYLIST_ID = "PLREPLACE_WITH_YOUR_PLAYLIST_ID";
+const YOUTUBE_PLAYLIST_ID = "PLMdV59IYMLTo";
 
 const monthGroups = [
   { label: "October 2026", slug: "october-2026", items: articles.slice(0, 3) },

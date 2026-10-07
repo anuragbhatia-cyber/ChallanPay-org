@@ -28,7 +28,7 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ChallanPay - Fast & Secure Challan Resolution",
+  title: "Challan Times — News, Opinion, Road Safety",
   description:
     "An opinionated news reader. Infinite stories, every angle, no spin.",
 };
@@ -46,36 +46,23 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-screen flex flex-col bg-bg text-ink pt-20">
         <header className="fixed inset-x-0 top-0 z-50 border-b rule bg-bg-elev">
           <div className="mx-auto max-w-[1360px] px-5 lg:px-10">
-            <div className="flex items-center justify-between h-20">
+            <div className="grid grid-cols-[1fr_auto_1fr] items-center h-20 gap-4">
+              <div className="justify-self-start">
+                <SearchBar />
+              </div>
               <Link
                 href="/"
-                aria-label="ChallanPay — Traffic challans, resolved"
-                className="flex items-center gap-4"
+                aria-label="Challan Times — Home"
+                className="justify-self-center flex flex-col items-center leading-none select-none"
               >
-                <span className="relative block h-12 md:h-16 w-[147px] md:w-[196px] select-none">
-                  <Image
-                    src="/logo-challanpay.png"
-                    alt="ChallanPay"
-                    fill
-                    sizes="196px"
-                    priority
-                    className="object-contain dark-hide"
-                  />
-                  <Image
-                    src="/logo-challanpay-dark.png"
-                    alt="ChallanPay"
-                    fill
-                    sizes="196px"
-                    priority
-                    className="object-contain dark-show"
-                  />
+                <span className="font-serif text-[26px] md:text-[34px] tracking-tight text-ink">
+                  Challan Times
                 </span>
-                <span className="hidden lg:inline text-[12px] uppercase tracking-[0.06em] text-ink-muted border-l rule pl-3">
+                <span className="mt-1 text-[10px] md:text-[11px] uppercase tracking-[0.18em] text-ink-muted">
                   Thursday · 05 Oct 2026
                 </span>
               </Link>
-              <div className="flex items-center gap-2">
-                <SearchBar />
+              <div className="justify-self-end flex items-center gap-2">
                 <ThemeToggle />
                 <button className="group h-9 pl-6 pr-5 bg-ink text-bg rounded-full text-[13px] font-medium flex items-center gap-3">
                   Check Challans
