@@ -46,18 +46,18 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       </head>
       <body className="min-h-screen flex flex-col bg-bg text-ink pt-14">
         <header className="fixed inset-x-0 top-0 z-50 border-b rule bg-bg-elev">
-          <div className="mx-auto max-w-[1360px] px-5 lg:px-10">
-            <div className="flex items-center justify-between h-14 gap-4">
+          <div className="mx-auto max-w-[1360px] px-4 lg:px-10">
+            <div className="flex items-center justify-between h-14 gap-3">
               <Link
                 href="/"
                 aria-label="Challan Times — Home"
-                className="text-[14px] font-medium uppercase tracking-[0.16em] text-ink-muted hover:text-ink transition-colors"
+                className="min-w-0 truncate text-[11px] sm:text-[14px] font-medium uppercase tracking-[0.12em] sm:tracking-[0.16em] text-ink-muted hover:text-ink transition-colors"
               >
-                Thursday · 05 Oct 2026
+                <span className="hidden sm:inline">Thursday · </span>05 Oct 2026
               </Link>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 shrink-0">
                 <ThemeToggle />
-                <button className="group h-9 pl-6 pr-5 bg-ink text-bg rounded-full text-[13px] font-medium flex items-center gap-3">
+                <button className="group h-9 px-4 sm:pl-6 sm:pr-5 bg-ink text-bg rounded-full text-[13px] font-medium flex items-center gap-2 sm:gap-3 whitespace-nowrap">
                   Check Challans
                   <svg
                     width="14"
@@ -69,7 +69,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     aria-hidden="true"
-                    className="transition-transform duration-200 group-hover:translate-x-0.5"
+                    className="hidden sm:block transition-transform duration-200 group-hover:translate-x-0.5"
                   >
                     <path d="M5 12h14" />
                     <path d="M13 6l6 6-6 6" />
