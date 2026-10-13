@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter, Fraunces, JetBrains_Mono } from "next/font/google";
-import Image from "next/image";
 import Link from "next/link";
 import "./globals.css";
 import { ThemeToggle } from "@/components/ThemeToggle";
@@ -82,34 +81,19 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <main className="flex-1">{children}</main>
         <ChatBot />
         <footer className="bg-[#0e1a33] text-white mt-16">
-          <div className="mx-auto max-w-[1360px] px-5 lg:px-10 pt-16 pb-10">
-            <div>
-              <div className="relative block h-12 md:h-16 w-[147px] md:w-[196px] select-none">
-                <Image
-                  src="/logo-challanpay-dark.png"
-                  alt="ChallanPay"
-                  fill
-                  sizes="196px"
-                  className="object-contain"
-                />
+          <div className="mx-auto max-w-[1360px] px-5 lg:px-10 py-8">
+            <div className="flex items-center justify-between flex-wrap gap-4">
+              <div className="flex items-center gap-5 flex-wrap">
+                <p className="text-[13px] text-white/55">
+                  © 2026 ChallanPay. All rights reserved.
+                </p>
+                <Link
+                  href="/editorial-policy"
+                  className="text-[13px] text-white/55 hover:text-white transition-colors"
+                >
+                  Editorial Policy
+                </Link>
               </div>
-              <p className="mt-6 text-[15px] text-white/85 max-w-[480px]">
-                India&apos;s most trusted platform for fast &amp; secure
-                challan payments.
-              </p>
-              <p className="mt-6 text-[13px] text-white/55">
-                Sproutech Solutions Private Limited
-              </p>
-              <p className="mt-2 text-[13px] text-white/55 max-w-[480px]">
-                India Accelerator Coworking, Lower Ground Floor, LG-007-02,
-                MGF Metropolis Mall, MG Road, Gurugram, Haryana, 122002
-              </p>
-            </div>
-
-            <div className="mt-12 pt-6 border-t border-white/10 flex items-center justify-between flex-wrap gap-4">
-              <p className="text-[13px] text-white/55">
-                © 2026 ChallanPay. All rights reserved.
-              </p>
               <div className="flex items-center gap-4 text-white/60">
                 <a
                   href="https://x.com/challanpay25389"
