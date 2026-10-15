@@ -155,7 +155,7 @@ export function ChatBot() {
         onClick={() => setOpen((v) => !v)}
         aria-label={open ? "Close assistant" : "Open assistant"}
         aria-expanded={open}
-        className="fixed bottom-5 right-5 z-50 h-14 w-14 rounded-full bg-ink text-bg flex items-center justify-center shadow-lg hover:scale-105 transition-transform"
+        className="fixed bottom-5 right-5 z-50 h-14 w-14 rounded-full bg-ink text-bg flex items-center justify-center ring-1 ring-white/15 shadow-[0_8px_24px_rgba(0,0,0,0.45),0_0_0_6px_rgba(255,255,255,0.08)] hover:scale-105 transition-transform"
       >
         {open ? (
           <svg

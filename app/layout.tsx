@@ -83,90 +83,28 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <footer className="bg-[#0e1a33] text-white mt-16">
           <div className="mx-auto max-w-[1360px] px-5 lg:px-10 py-8">
             <div className="flex items-center justify-between flex-wrap gap-4">
+              <p className="text-[13px] text-white/55">
+                © 2026. All rights reserved.
+              </p>
               <div className="flex items-center gap-5 flex-wrap">
-                <p className="text-[13px] text-white/55">
-                  © 2026 ChallanPay. All rights reserved.
-                </p>
                 <Link
                   href="/editorial-policy"
-                  className="text-[13px] text-white/55 hover:text-white transition-colors"
+                  className="text-[13px] text-white/55 underline underline-offset-4 hover:text-white transition-colors"
                 >
                   Editorial Policy
                 </Link>
-              </div>
-              <div className="flex items-center gap-4 text-white/60">
-                <a
-                  href="https://x.com/challanpay25389"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="X (Twitter)"
-                  className="hover:text-white"
+                <Link
+                  href="/privacy-policy"
+                  className="text-[13px] text-white/55 underline underline-offset-4 hover:text-white transition-colors"
                 >
-                  <svg
-                    width="18"
-                    height="18"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path d="M18.244 2H21l-6.52 7.45L22 22h-6.07l-4.75-6.21L5.73 22H3l6.98-7.98L2 2h6.21l4.28 5.66L18.244 2zm-1.07 18.26h1.63L7.9 3.63H6.17l11.004 16.63z" />
-                  </svg>
-                </a>
-                <a
-                  href="https://www.instagram.com/challanpay.in"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="Instagram"
-                  className="hover:text-white"
+                  Privacy Policy
+                </Link>
+                <Link
+                  href="/terms-conditions"
+                  className="text-[13px] text-white/55 underline underline-offset-4 hover:text-white transition-colors"
                 >
-                  <svg
-                    width="18"
-                    height="18"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.8"
-                    aria-hidden="true"
-                  >
-                    <rect x="3" y="3" width="18" height="18" rx="5" />
-                    <circle cx="12" cy="12" r="4" />
-                    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
-                  </svg>
-                </a>
-                <a
-                  href="https://www.facebook.com/ChallanPay"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="Facebook"
-                  className="hover:text-white"
-                >
-                  <svg
-                    width="18"
-                    height="18"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.7c0-.9.3-1.6 1.6-1.6h1.6V4.2c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.8H8v3.2h2.6V22h2.9z" />
-                  </svg>
-                </a>
-                <a
-                  href="https://www.linkedin.com/company/challanpay/"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="LinkedIn"
-                  className="hover:text-white"
-                >
-                  <svg
-                    width="18"
-                    height="18"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3V9zm7 0h3.8v1.7h.05c.53-1 1.84-2.05 3.78-2.05 4.04 0 4.79 2.66 4.79 6.12V21h-4v-5.5c0-1.3-.02-3-1.83-3-1.83 0-2.1 1.43-2.1 2.9V21h-4V9z" />
-                  </svg>
-                </a>
+                  Terms & Conditions
+                </Link>
               </div>
             </div>
           </div>
